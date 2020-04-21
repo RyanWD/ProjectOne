@@ -3,6 +3,8 @@ class Article < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
 
+  attr_accessor :image_file_name
+  
   has_attached_file :image
 
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
