@@ -1,9 +1,9 @@
 class Article < ApplicationRecord
-  has_many :comments
+  has_many :comments, dependent: :delete_all
   has_many :taggings
-  has_many :tags, through: :taggings
+  has_many :tags, through: :taggings, dependent: :delete_all
 
-  attr_accessor :image_file_name
+  attr_accessor :image
   
   has_attached_file :image
 
