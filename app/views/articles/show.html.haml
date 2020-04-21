@@ -1,4 +1,7 @@
 %h1= @article.title
+- if @article.image.exists?
+  %p= image_tag @article.image.url
+
 %p
   Tags:
   - @article.tags.each do |tag|
