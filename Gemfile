@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem "paperclip"
 
+gem 'sorcery'
+
 # Use Haml
 gem 'haml-rails'
 gem 'erb2haml'
